@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Seblak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+        <!--HEADER-->
+        <header class='shadow-md font-sans tracking-wide relative z-50'>
+            <section class='py-2 bg-[#EE3535] text-white text-right px-10'>
+                <p class='text-sm'><strong class="mx-3">Alamat:</strong>Jl. Anya No. 5 RT 0 RW 5, Kelurahan Shiro, Kecamatan
+                    Killua, Kota Kotaro, Provinsi Kana
+                    <strong class="mx-3">Contact No:</strong>08101010101010
+                </p>
+            </section>
+    
+            <div class='flex flex-wrap items-center justify-between gap-4 px-10 py-4 bg-white min-h-[70px]'>
+                <a href="index.html">
+                    <img src="asset/SEBLAK PEDO.png" alt="logo" class='w-36' />
+                </a>
+    
+                <div id="collapseMenu"
+                    class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+    
+                    <ul
+                        class='lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                        <li class='mb-6 hidden max-lg:block'>
+                            <a href="javascript:void(0)">
+                                <img src="asset/SEBLAK PEDO.png" alt="logo" class='w-36' />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Buy Button -->
+                <div class="ml-auto">
+                    <a href="beli.html"
+                        class="bg-[#EE3535] hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                        Buy
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--HEADER-->
+
+    <!-- ORDER FORM -->
+    <section id="order" class="py-10 px-10 bg-gray-100">
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-6 text-center">Form Pemesanan Seblak</h2>
+
+            <form action="#" method="POST" class="space-y-4">
+                <!-- Nama -->
+                <div>
+                    <label for="name" class="block text-sm font-semibold text-gray-700">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE3535] focus:border-transparent">
+                </div>
+
+                <!-- Alamat -->
+                <div>
+                    <label for="address" class="block text-sm font-semibold text-gray-700">Alamat Pengiriman</label>
+                    <textarea id="address" name="address" rows="4" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE3535] focus:border-transparent"></textarea>
+                </div>
+
+                <!-- Nomor Telepon -->
+                <div>
+                    <label for="phone" class="block text-sm font-semibold text-gray-700">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE3535] focus:border-transparent">
+                </div>
+
+                <!-- Jenis Seblak -->
+                <div>
+                    <label for="type" class="block text-sm font-semibold text-gray-700">Jenis Seblak</label>
+                    <select id="type" name="type" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE3535] focus:border-transparent">
+                        <option value="" disabled selected>Pilih Jenis Seblak</option>
+                        <option value="Seblak Original">Seblak Original</option>
+                        <option value="Seblak Mie">Seblak Mie</option>
+                        <option value="Seblak Ceker">Seblak Ceker</option>
+                        <option value="Seblak Seafood">Seblak Seafood</option>
+                        <option value="Seblak Seafood">Seblak Custom</option>
+                    </select>
+                </div>
+
+                <!-- Jumlah -->
+                <div>
+                    <label for="quantity" class="block text-sm font-semibold text-gray-700">Jumlah Porsi</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE3535] focus:border-transparent">
+                </div>
+
+                <!-- Catatan Tambahan -->
+                <div>
+                    <label for="notes" class="block text-sm font-semibold text-gray-700">Catatan Tambahan (tuliskan level kepedasan 1-5, jika seblak custom silahkan ketik topingnya disini)</label>
+                    <textarea id="notes" name="notes" rows="3"
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE3535] focus:border-transparent"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-[#EE3535] hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
