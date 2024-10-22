@@ -67,7 +67,7 @@ $result = $conn->query($sql);
                     <?php
                     if ($result->num_rows > 0) {
                         // Output data per row
-                        while($row = $result->fetch_assoc()) {
+                        while ($row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td class='w-1/6 py-3 px-4'>" . $row["id"] . "</td>";
                             echo "<td class='w-1/6 py-3 px-4'>" . $row["name"] . "</td>";
@@ -76,6 +76,8 @@ $result = $conn->query($sql);
                             echo "<td class='w-1/6 py-3 px-4'>" . $row["type"] . "</td>";
                             echo "<td class='w-1/6 py-3 px-4'>" . $row["quantity"] . "</td>";
                             echo "<td class='w-1/3 py-3 px-4'>" . $row["notes"] . "</td>";
+                            // Tambahkan tombol download PDF
+                            echo "<td class='w-1/6 py-3 px-4'><a href='generate_pdf.php?id=" . $row["id"] . "' class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>PDF</a></td>";
                             echo "</tr>";
                         }
                     } else {
